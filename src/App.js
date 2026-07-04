@@ -1,11 +1,11 @@
 // import './App.css';
-import CustomerAdd from './CustomerAdd';
-import CustomerView from './CustomerView';
-import MultipleApi from './MultipleApi';
-import InterviewApiCall from './InterviewApi';
+import CustomerAdd from './redux/CustomerAdd';
+import CustomerView from './redux/CustomerView';
+import MultipleApi from './multiple-api-call/MultipleApi';
+import InterviewApiCall from './multiple-api-call/InterviewApi';
 import { Provider } from 'react-redux';
-import { store } from './store';
-import CustomHook from './CustomHook';
+import { store } from './redux/store';
+import CustomHook from './Custom-Hook/CustomHook';
 import SumCalculator from './useCallback-useMemo-Example/SumCalculator';
 import Login from './react-auth/Login';
 import Profile from './react-auth/Profile';
