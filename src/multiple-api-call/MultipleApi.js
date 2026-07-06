@@ -33,22 +33,22 @@ export default function MultipleApi() {
     fetchData();
 
     // Axios example using Promise.all
-    
-    async function axiosfetchDataMethod() {
-    try {
-      const [users, posts, todos] = await Promise.all([
-        axios.get("https://jsonplaceholder.typicode.com/users?_limit=5 "),
-        axios.get("https://jsonplaceholder.typicode.com/posts?_limit=5"),
-        axios.get("https://jsonplaceholder.typicode.com/todos?_limit=5")
-      ]);
 
-      console.log(users.data);
-      console.log(posts.data);
-      console.log(todos.data);
-    } catch (err) {
-      console.log(err);
+    async function axiosfetchDataMethod() {
+      try {
+        const [users, posts, todos] = await Promise.all([
+          axios.get("https://jsonplaceholder.typicode.com/users?_limit=5 "),
+          axios.get("https://jsonplaceholder.typicode.com/posts?_limit=5"),
+          axios.get("https://jsonplaceholder.typicode.com/todos?_limit=5")
+        ]);
+
+        console.log("Axios Method - Users:", users.data);
+        console.log("Axios Method - Posts:", posts.data);
+        console.log("Axios Method - Todos:", todos.data);
+      } catch (err) {
+        console.log(err);
+      }
     }
-  }
 
     axiosfetchDataMethod();
 
